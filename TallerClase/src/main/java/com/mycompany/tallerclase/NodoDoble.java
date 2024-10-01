@@ -8,6 +8,21 @@ package com.mycompany.tallerclase;
 public class NodoDoble {
 
     /**
+     * @return the enlace
+     */
+    public NodoDoble getEnlace() {
+        return enlace;
+    }
+
+    /**
+     * @param enlace the enlace to set
+     */
+    public void setEnlace(NodoDoble enlace) {
+        this.enlace = enlace;
+    }
+
+    private NodoDoble enlace; 
+    /**
      * @return the anterior
      */ 
     public NodoDoble getAnterior() {

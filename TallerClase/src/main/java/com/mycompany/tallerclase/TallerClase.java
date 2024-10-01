@@ -1,6 +1,8 @@
 
 package com.mycompany.tallerclase;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SCIS2-29
@@ -37,6 +39,18 @@ public class TallerClase {
             nuevo.setSiguiente(null);
         }
         
+    }
+    
+    public void consultar (){   
+        NodoDoble temporal = inicio; 
+        if(inicio == null){
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+        }else {
+            do{
+               JOptionPane.showMessageDialog(null, " Nombre: " + temporal.getNombre() + " La edad es: " + temporal.getEdad());
+               temporal = temporal.getEnlace();
+            }while (temporal != null); 
+        }
     }
     
     

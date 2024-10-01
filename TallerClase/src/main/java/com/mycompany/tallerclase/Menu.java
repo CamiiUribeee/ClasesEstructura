@@ -29,7 +29,7 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         insertarFinal = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        consultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,7 +40,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Consulta");
+        consultar.setText("Consultar");
+        consultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,7 +58,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(insertarFinal))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(jButton1)))
+                        .addComponent(consultar)))
                 .addContainerGap(150, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -62,7 +67,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(insertarFinal)
                 .addGap(28, 28, 28)
-                .addComponent(jButton1)
+                .addComponent(consultar)
                 .addContainerGap(183, Short.MAX_VALUE))
         );
 
@@ -76,6 +81,11 @@ public class Menu extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_insertarFinalActionPerformed
+
+    private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
+        objdobles.consultar();
+      
+    }//GEN-LAST:event_consultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,7 +123,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton consultar;
     private javax.swing.JButton insertarFinal;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
