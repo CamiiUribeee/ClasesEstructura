@@ -18,7 +18,7 @@ public class TallerClase {
     }
     
     
-    public void insertarInicio(String dato, int edad){
+    public void insertarInicio(String dato, int edad){   //lista doblemente circular, donde el que llega, llega de primero
         
         NodoDoble nuevo= new NodoDoble(); 
         nuevo.setAnterior(nuevo);
@@ -36,13 +36,7 @@ public class TallerClase {
         inicio=nuevo; 
         
     }
-    
-    
-    
-    
-    
-    
-    
+   
     
     public void insertarAlFinal(String nombre, int edad){
         NodoDoble nuevo = new NodoDoble(); 
@@ -78,7 +72,18 @@ public class TallerClase {
                temporal = temporal.getEnlace();
             }while (temporal != null); 
         }
+    } 
+    
+    public void imprimir(){
+        NodoDoble temporal = inicio; 
+        if(inicio == null){
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+        }else {
+            do{
+                JOptionPane.showMessageDialog(null, "Datos: Nombre: " + " " + temporal.getNombre() + " Edad: " + temporal.getEdad());
+                temporal = temporal.
+            }
+        }
     }
-    
-    
 }
