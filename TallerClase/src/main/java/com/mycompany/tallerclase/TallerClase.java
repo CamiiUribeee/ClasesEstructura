@@ -17,6 +17,33 @@ public class TallerClase {
         inicio=null; 
     }
     
+    
+    public void insertarInicio(String dato, int edad){
+        
+        NodoDoble nuevo= new NodoDoble(); 
+        nuevo.setAnterior(nuevo);
+        nuevo.setSiguiente(nuevo);
+        nuevo.setNombre(dato);
+        nuevo.setEdad(edad);
+        
+        if (inicio != null){
+            nuevo.setSiguiente(inicio);
+            nuevo.setAnterior(inicio.getAnterior());
+            
+            nuevo.getAnterior().setSiguiente(nuevo);
+            inicio.setAnterior(nuevo);
+        }
+        inicio=nuevo; 
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     public void insertarAlFinal(String nombre, int edad){
         NodoDoble nuevo = new NodoDoble(); 
         nuevo.setAnterior(null);
